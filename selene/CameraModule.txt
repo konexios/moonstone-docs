@@ -1,0 +1,97 @@
+Camera module provides ability to capture data from local or IP cameras using OpenCV library. It also allows detecting faces on captured images.
+
+**Implementing class**: com.arrow.selene.device.uvc.CameraModule
+**OS dependency**: None
+**Requirements**: OpenCV library
+
+CameraModule.properties
+
+**Properties** 
+
+"deviceClass=com.arrow.selene.device.uvc.CameraModule
+
+# info
+name=
+uid=
+# properties
+
+enabled=boolean
+index=\tinteger 
+# Defines index of local camera to be used for capturing. Only if ipCamera=false
+
+streamUrl=string
+# Defines URL of IP-camera. Only if ipCamera=true
+
+width=integer
+# Defines width of captured images
+
+height=integer
+# Defines height of captured images
+
+format=bmp/gif/jpg/jpeg/png/wbmp\
+# Defines format of captured images
+
+frequencyInSecs=integer
+# Defines interval of image capturing
+
+directory=string
+#Defines directory where captured images should be saved to. Only if saveLocal=true
+
+saveLocal=boolean
+# Allows to save captured images locally 
+
+detectFace=boolean
+# Allows to detect faces on captured images
+
+markDetectedFace=boolean
+# Allow to draw rectangles on detected faces. Only if detectFace=true
+
+overlayEnabled=boolean
+# Allows to draw current time and text from overlayUrl on captured images
+
+overlayUrl=string
+# Defines text to be drawn on captured images. Only if overlayEnabled=true
+
+ipCamera=boolean
+# Defines which camera should be used (IP or local)
+
+faceDetectionFile=string
+# Defines file to be used by face detection
+
+faceDetectionScaleFactor=double\double
+# Defines scale factor specifying how much the image size is reduced at each image scale
+
+faceDetectionMinNeighbors=integer
+# Defines how many neighbors each candidate rectangle should have to retain it
+
+faceDetectionFlags=integer
+
+faceDetectionMinSizeX=integer
+# Defines minimum possible object size. Objects smaller than that are ignored.
+
+faceDetectionMinSizeY=integer
+# Defines maximum possible object size. Objects larger than that are ignored.
+
+comTrigger=boolean
+#Allows to trigger image capture on receiving specific text from serial portv
+
+comTriggerValue=string
+# Defines text which triggers image capture
+
+comTriggerThresholdInSecs=integer
+# Defines minimum interval of capture triggering
+
+comTriggerPort=string
+# Defines serial port name to be used to trigger image capture
+
+comTriggerBaudRate=integer
+# Defines baudrate to be used to configure serial port
+
+comTriggerDataBits=integer
+# Defines number of databits to be used to configure serial port
+
+comTriggerStopBits=integer
+# Defines number of stop-bits to be used to configure serial port
+
+comTriggerParity=integer
+# Defines parity to be used to configure serial port","language": 
