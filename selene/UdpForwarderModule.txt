@@ -1,0 +1,87 @@
+UDP forwarder module allows to forward data received from specific UDP port.
+
+**Implementing class**: com.arrow.selene.device.udp.udpforwarder.UdpForwarderModule
+**OS dependency**: None
+**Requirements**: None
+
+UdpForwarderModule.properties
+
+**Properties**
+
+deviceClass=com.arrow.selene.device.udp.udpforwarder.UdpForwarderModule
+
+# info
+
+name=
+type=
+uid=
+
+# properties
+
+enabled=boolean
+
+deviceAddress=string <hostname or IP address>
+# Defines address to which received data should be forwarded
+
+devicePort=integer
+# Defines UDP port to which received data should be forwarded
+
+allowPublishLocal=boolean
+# Defines if device can be used for data forwarding
+
+address=string
+# Defines address of network interface to be used to listen data
+
+port=integer
+# Defines UDP port to be used to listen data
+
+deviceAddress=
+
+devicePort=
+
+
+
+Examples
+
+Python
+ 
+import socket
+ 
+UDP_IP = \"127.0.0.1\"
+UDP_PORT = 44000
+MESSAGE = \"{\\\"f|temperature\\\":\\\"20.5\\\"}\"
+ 
+print \"UDP target IP:\", UDP_IP
+print \"UDP target port:\", UDP_PORT
+print \"message:\", MESSAGE
+ 
+sock = socket.socket(socket.AF_INET, # Internet
+socket.SOCK_DGRAM) # UDP
+sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))"
+  
+
+PHP
+
+<?php\n    $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+
+$msg = \"{\\\"f|temperature\\\":\\\"20.5\\\"}\";
+$len = strlen($msg);
+
+socket_sendto($sock, $msg, $len, 0, '127.0.0.1', 44000);
+socket_close($sock);
+?>
+
+Node.js
+
+var PORT = 44000;
+var HOST = '127.0.0.1';
+
+var dgram = require('dgram');
+var message = new Buffer('{\\\"f|temperature\\\":\\\"20.5\\\"}');
+
+var client = dgram.createSocket('udp4');
+client.send(message, 0, message.length, PORT, HOST, function(err, bytes) {
+if (err) throw err;
+console.log('UDP message sent to ' + HOST +':'+ PORT);
+client.close();
+});
