@@ -1,0 +1,61 @@
+Thunderboard React module interacts with SiLabs Thunderboard React device via BLE, periodically acquires telemetry (3D device orientation and acceleration, temperature, humidity, UV index, ambient light and buttons state) and controls onboard green and blue LEDs.
+
+**Implementing class**: com.arrow.selene.device.ble.thunderboard.react.ThunderboardReactModule
+**OS dependency**: Linux systems only (due to bluetooth stack implementations)
+**Requirements**: bluez v5.42+, BLE adapter
+
+ThunderboardReactModule.properties
+
+**Properties** 
+deviceClass=com.arrow.selene.device.ble.thunderboard.react.ThunderboardReactModule
+
+# info
+
+name=
+uid=
+
+bleInterface=string
+# Defines name of bluetooth interface (e.g. hci0)
+
+bleAddress=\tstring
+# The MAC address of the BLE device (e.g. FA:73:B2:D1:FD:C7)
+
+# properties
+
+enabled=boolean
+
+retryInterval=integer
+# Defines interval of checking GATT connectivity in seconds. Makes sense only in case if useDbus=false
+
+useDbus=boolean
+# Enables D-Bus to be used to obtain data instead of direct parsing of received packets
+
+HumiditySensor/enabled=boolean
+# Enables humidity sensor
+
+TemperatureSensor/enabled=boolean
+# Enables temperature sensor
+
+UvSensor/enabled=boolean
+# Enables UV sensor
+
+LightSensor/enabled=boolean
+# Enables ambient light sensor
+
+KeysSensor/enabled=boolean
+# Enables keys sensor
+
+AccelerationSensor/enabled=boolean
+# Enables accelerator sensor
+
+OrientationSensor/enabled=boolean
+# Enables orientation sensor
+
+LedsControl/enabled=boolean
+# Enables ability to control LEDs
+
+
+States
+
+led1status boolean
+led2status boolean
