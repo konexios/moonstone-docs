@@ -1,0 +1,66 @@
+Main module representing Selene. It allows to register itself in the cloud and send periodical heartbeats to it; load, register in cloud and start connected devices; obtain information about OS and installed hardware; perform periodical self-health checks; purge old telemetry from local DB.
+
+**Implementing class**: com.arrow.selene.device.self.SelfModule
+**OS dependency**: None
+**Requirements**: None
+
+self.properties
+
+**Properties**:
+
+deviceClass=com.arrow.selene.device.self.SelfModule
+
+# info
+
+name=${mac.simple}
+# Unique name e.g rpi-${mac.simple}
+
+uid=${mac.simple}
+# Unique identifier you can use the devices mac address
+
+# properties
+
+iotConnectUrl=string
+# Defines address of API server
+
+iotConnectMqtt=string
+# Defines address of MQTT server to be used to send telemetry and receive commands
+
+iotConnectMqttVHost=string
+# Defines virtual MQTT host name to be used in building of unique MQTT user name
+
+apiKey=string
+# Defines API key to encrypt/decrypt messages between cloud and gateway
+
+secretKey=string
+# Defines secret key to encrypt/decrypt messages between cloud and gateway
+
+heartBeatIntervalMs=long
+# Defines interval of sending heartbeat messages from gateway to cloud in milliseconds
+
+purgeTelemetryIntervalDays=Integer
+# Defines interval of purging telemetry data from local DB in days
+
+purgeMessagesIntervalDays=Integer
+# Defines interval of purging log messages from local DB in days
+
+sendGatewayErrors=boolean
+# Defines if gateway should send gateway's errors to cloud
+
+sendDeviceErrors=boolean
+# Defines if gateway should send devices' errors to cloud
+
+healthCheckIntervalMins=integer
+# Defines interval of health check script executions in minutes
+
+healthCheckScriptFile=String
+# Defines name of script file to be used to check gateway health check
+
+cloudTransferMode=string
+# Defines mode of telemetry sending.
+# SINGLE means sending each telemetry separately.
+# BATCH means that engine accumulates telemetry in internal buffer and periodically sends accumulated data.
+# GZIP_BATCH looks like BATCH, but accumulated telemetry are gzipped before sending
+
+cloudBatchSendingIntervalMs=long
+# Defines interval of sending telemetry to cloud in case of BATCH or GZIP_BATCH modes
