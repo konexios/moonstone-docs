@@ -1,0 +1,32 @@
+Command line module periodically executes specific commands and extracts telemetry from command output.
+
+**Implementing class**: com.arrow.selene.device.cli.CliModuleImpl
+**OS dependency**: None
+**Requirements**: None
+
+CliModule.properties
+
+**Properties** 
+
+deviceClass=com.arrow.selene.device.cli.CliModuleImpl
+
+# info
+
+name=
+uid=
+
+# properties
+
+enabled=boolea
+
+dataType=string
+# Defines type of telemetry to be extracted from command output, string/long/double/string-array/long-array/double-array/raw
+
+command=string
+# Defines command to be periodically executed
+
+commandIntervalInSecs=long
+# Defines interval between command executions in seconds
+
+arrayDelimiter=string
+# Defines delimiter to be used to split command output for string-array, long-array, double-array data types
