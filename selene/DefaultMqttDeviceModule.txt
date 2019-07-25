@@ -1,0 +1,48 @@
+Default MQTT module subscribes to specific MQTT topics.
+
+**Implementing class**: com.arrow.selene.device.mqtt.DefaultMqttDeviceModule
+**OS dependency**: None
+**Requirements**: None
+
+DefaultMqttDeviceModule.properties
+
+**Properties** 
+deviceClass=com.arrow.selene.device.mqtt.DefaultMqttDeviceModule
+
+# info
+
+name=
+uid=
+
+# properties
+
+mqttTopics=string
+# Defines comma-separated list of MQTT topics that device should subscribe to
+
+payloadFormatted=boolean
+# Defines that payload received from topic is JSON-formatted and can be parsed before sending telemetry, otherwise it is assumed that telemetry contains raw payload
+
+mqttUrl=string
+# Defines address of MQTT server, tcp://localhost:1883
+
+mqttUserName=string
+# Defines MQTT user name
+
+mqttPassword=string
+# Defines MQTT user password
+
+## MQTT Topics
+
+The `mqttTopics` property can be set to any MQTT topic hierarchy, and it supports standard MQTT wildcards (# and +).
+
+* `#` - Can be used for all remaining levels of hierarchy
+* `+` - A wildcard for any single level of hierarchy
+
+For example, the `mqttTopics` property can be set to `device/+/sensors/#`. The first `+` matches any one value at that level of hierarchy - for example a device ID - and `#` matches anything including and beyond that level, for example sensor types, locations, etc. That will subscribe to topics like:
+
+* device/id-0/sensors/temperature/bedroom
+* device/id-0/sensors/temperature/kitchen
+* device/id-a/sensors/humidity/bedroom
+* device/id-a/sensors/pressure/bedroom
+
+For more information on MQTT topics and wildcards, see <a href="https://mosquitto.org/man/mqtt-7.html" target="_blank">this page :fa-external-link:</a>.
