@@ -1,0 +1,25 @@
+Cellular modem module periodically acquires GPS position from cellular modem.
+
+**Implementing class**: com.arrow.selene.device.cellular.CellularModemModule
+**OS dependency**: Linux systems only (due to dependency from D-Bus)
+**Requirements**: Cellular modem hardware
+
+CellularModemModule.properties
+
+**Properties** 
+deviceClass=com.arrow.selene.device.cellular.CellularModemModule
+
+# info
+
+name=
+uid=
+
+# properties
+
+enabled=boolean
+
+healthCheckMs=long
+# Defines interval between modem device health checks in milliseconds
+
+gpsPollingMs=long
+# Defines interval between attempt to acquire GPS position in milliseconds
