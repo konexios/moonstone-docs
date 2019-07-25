@@ -1,0 +1,65 @@
+The selene.properties file is used to configure the Arrow Connect Gateway software main engine.
+
+selene.properties
+
+**Properties**
+
+selene.jdbcUrl=string
+# Defines JDBC URL to be used to access to local DB
+
+selene.jdbcUser=string
+# Defines name of DB user to be used to access to local DB
+
+selene.jdbcPassword=string
+# Defines password of DB user to be used to access to local DB
+
+selene.fileDatabusDirectory=string
+# Defines path to directory containing databus underlying files. Makes sense only in case if selene.databus=file
+
+selene.mqttDatabusUrl=string
+# Defines address of MQTT databus server, tcp://localhost:1883. Only if selene.databus=mqtt
+
+selene.mqttDatabusUsername=string
+# Defines MQTT databus user name. Makes sense Only if selene.databus=mqtt
+
+selene.mqttDatabusPassword=string
+# Defines MQTT databus user password. Makes sense Only if selene.databus=mqtt
+
+selene.databusMaxBuffer=long
+# Defines maximum size of databus buffer. Buffers exceeding this value will be trimmed. Only if selene.databus=redis
+
+selene.databusPeekInterval=long
+# Defines interval between attempts to obtain data from databus. Only if selene.databus=file
+
+selene.databus=string
+# Defines type of databus to be used by engine, file/rabbitmq/redis/mqtt
+
+engine.redisHost=string
+# Defines address of Redis databus server. Only if selene.databus=redis
+
+engine.enabled=boolean
+# Enables or disables engine. Disabled engine will not be started
+
+engine.deviceDirectory=string
+# Defines path to directory containing property files of all devices to be handled by engine. Only if engine.moduleStrategy=PROPERTIES and database is clean
+
+engine.moduleStrategy=string
+# Defines strategy of loading devices:
+# PROPERTIES means that device configurations should be loaded from property files. (Ignored if database already contains devices).
+# DATABASE means that device configurations should be loaded from local DB.
+# CLOUD means that device configurations should be acquired from cloud.
+
+engine.downloadDirectory=string
+# Defines directory to be used to download engine software and devices firmware updates
+
+engine.backupDirectory=string
+# Defines directory to be used to backup current engine software and devices firmware if upgrade is requested
+
+engine.configDirectory=string
+# Defines directory containing external configuration files. Currently used to keep script files for engine restart and parsing received data and extracting telemetry
+
+engine.scriptingEngine=string
+# Defines name of scripting engine to be used to interpret telemetry-related scripts, nashorn
+
+engine.restartScriptFilename=string
+# Defines name of script file to be used if engine restart is requested
