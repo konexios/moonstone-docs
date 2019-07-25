@@ -1,0 +1,73 @@
+Web camera module captures video clips from webcam, saves it locally and sends to cloud as telemetry.
+
+**Implementing class**: com.arrow.selene.device.uvc.UvcModule
+**OS dependency**: None
+**Requirement**s: OpenCV library, webcam hardware
+
+UvcModule.properties
+
+**Properties** 
+
+deviceClass=com.arrow.selene.device.uvc.UvcModule
+
+# info
+
+name=
+uid=
+
+# properties
+
+index=integer
+# Defines index of local camera to be used for capturing
+
+maxFrameCounter=integer
+# Defines maximum number of frames in video clip
+
+saveToFile=boolea
+# Defines if clip should be saved to file
+
+frameRate=integer
+# Defines FPS of captured video
+
+frameWidth=integer
+# Defines width of captured video
+
+frameHeight=integer
+# Defines height of captured video
+
+fourcc=string
+# Defines codec to be used in captured video encoding, H264
+
+directory=string
+# Defines directory that captured clips should be saved to. Makes sense only if saveToFile=true
+
+fileNamePattern=string%s.mp4
+# Defines pattern to build file name
+
+saveAsStream=boolean
+# Defines if clip should be saved as images stream
+
+streamNamePattern=string
+# Defines pattern to build stream file name
+
+videoLenMins=long
+# Defines maximum length of captured video in minutes
+
+liveStream=boolean
+# Defines if captured images should be sent as telemetry to cloud
+
+liveFrameWidth=integer
+# Defines width of images to be sent as telemetry. Makes sense only if liveStream=true
+
+liveFrameHeight=integer
+# Defines height of images to be sent as telemetry. Makes sense only if liveStream=true
+
+sendFrameCounter=integer
+# Defines rate of sending captured images as telemetry. Makes sense only if liveStream=true
+
+retryIntervalSecs=integer
+
+# Defines interval between attempts of capturing in case if errors occured
+
+detectDisconnectMs=integer
+# Defines maximum time for capturing one image. Exceeding of this threshold means webcam disconnected
