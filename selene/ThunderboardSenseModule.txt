@@ -1,0 +1,85 @@
+Thunderboard Sense module interacts with SiLabs Thunderboard Sense device via BLE, periodically acquires telemetry (3D device orientation and acceleration, temperature, humidity, pressure, UV index, ambient light, sound level, air quality and buttons state) and controls 4 onboard RGB LEDs.
+
+**Implementing class**: com.arrow.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
+**OS dependency**: Linux systems only (due to bluetooth stack implementations)
+**Requirements**: bluez v5.42+, BLE adapter
+
+ThunderboardSenseModule.properties
+
+**Properties** 
+
+deviceClass=com.arrow.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
+
+# info
+
+name=
+uid=
+
+bleInterface=string
+# Defines name of bluetooth interface (e.g. hci0)
+
+bleAddress=string
+# The MAC address of the BLE device (e.g. FA:73:B2:D1:FD:C7)
+
+# properties
+
+enabled=boolean
+
+retryInterval=integer
+# Defines interval of checking GATT connectivity in milliseconds. Makes sense only in case if useDbus=false
+
+useDbus=boolean
+# Enables D-Bus to be used to obtain data instead of direct parsing of received packets
+
+HumiditySensor/enabled=boolean
+# Enables humidity sensor
+
+TemperatureSensor/enabled=boolean
+# Enables temperature sensor
+
+UvSensor/enabled=boolean
+# Enables UV sensor
+
+LightSensor/enabled=boolean
+# Enables ambient light sensor
+
+KeysSensor/enabled=boolean
+# Enables keys sensor
+
+AccelerationSensor/enabled=boolean
+# Enables accelerator sensor
+
+OrientationSensor/enabled=boolean
+# Enables orientation sensor
+
+RgbLedsControl/enabled=boolean
+# Enables ability to control RGB LEDs
+
+PressureSensor/enabled=boolean
+# Enables pressure sensor
+
+SoundSensor/enabled=boolean
+# Enables sound sensor
+
+CO2Sensor/enabled=boolean
+# Enables CO2 sensor
+
+TvocSensor/enabled=boolean
+# Enables volatile organic compounds sensor
+  
+  
+
+States
+led0 boolean
+led1 boolean
+led2 boolean
+led3 boolean
+    
+color (rgb int)
+red 16711680
+green 65280
+blue 255
+pink 16711935
+yellow 16776960
+orange 16744448
+default 20592
