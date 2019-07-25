@@ -1,0 +1,43 @@
+GPIO/I2C module interacts (send and receive digital and analog data) with peripheral hardware connected to GPIO or I2C buses.
+
+**Implementing class**: com.arrow.selene.device.peripheral.PeripheralModule
+**OS dependency**: Linux systems only (due to dependency from MRAA and UPM libraries)
+**Requirements**: MRAA and UPM libraries
+
+PeripheralModule.properties
+
+deviceClass=com.arrow.selene.device.peripheral.PeripheralModule
+
+# info
+
+name=
+uid=
+
+# properties
+
+enabled=boolean
+
+periphery=string
+# Defines connected peripheral devices in json format"
+
+
+## Format
+{
+	"devices": {
+		"<device_name>": {
+			"deviceClass": "java class implementing device logic",
+			< other_properties >
+		}
+	}
+}
+
+## Example 
+
+{
+	"devices": {
+		"Test": {
+			"deviceClass": "com.arrow.selene.device.peripheral.devices.grovepi.Relay",
+			"pin": "13"
+		}
+	}
+}
