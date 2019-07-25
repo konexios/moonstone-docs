@@ -1,0 +1,61 @@
+The MQTT Router Module is a general purpose MQTT protocol based adapter. It can be utilized to connect with any third party application. 
+
+**Implementing class**: deviceClass=com.arrow.selene.device.mqttrouter.MqttRouterModule
+**OS dependency**: None
+**Requirements**: None
+
+MkRouterModule.properties
+
+**Properties** 
+deviceClass=com.arrow.selene.device.mqttrouter.MqttRouterModule
+
+# info
+
+name= 
+uid=
+
+# properties
+
+enabled=
+
+telemetryTopics=
+# Comma-separated list of MQTT topics that device should subscribe to.
+
+deviceUidToken=
+# Defines position of device UID inside MQTT topic name. Used to extract device UIDs from topic
+
+mqttUrl=tcp://localhost:1883
+# Defines address of MQTT server and port
+
+mqttUserName=
+# MQTT user name
+
+mqttPassword=
+# MQTT user password
+
+clientId=com.arrow.selene.device.mqttrouter.MqttRouterModule
+# MQTT clientId\n\nmqttBrokerCertified=false
+# MQTT broker certified broker
+
+caCertPath=
+
+clientCertPath=
+
+privateKeyPath=
+
+deviceRegistrationOverMqtt=false
+# New device registration over mqtt.
+
+deviceRegisrationTopic=
+
+deviceNameTag=
+
+deviceUidTag=
+
+devices=
+
+registrationtransposerScript
+
+telemetryTransposerScript=
+
+stateTransposerScript=
