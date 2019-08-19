@@ -1,6 +1,6 @@
 Cellular modem module periodically acquires GPS position from cellular modem.
 
-**Implementing class**: com.arrow.selene.device.cellular.CellularModemModule
+**Implementing class**: moonstone.selene.device.cellular.CellularModemModule
 **OS dependency**: Linux systems only (due to dependency from D-Bus)
 **Requirements**: Cellular modem hardware
 
