@@ -1,6 +1,6 @@
 Command line module periodically executes specific commands and extracts telemetry from command output.
 
-**Implementing class**: com.arrow.selene.device.cli.CliModuleImpl
+**Implementing class**: moonstone.selene.device.cli.CliModuleImpl
 **OS dependency**: None
 **Requirements**: None
 
