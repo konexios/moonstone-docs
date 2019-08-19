@@ -1,6 +1,6 @@
 Camera module provides ability to capture data from local or IP cameras using OpenCV library. It also allows detecting faces on captured images.
 
-**Implementing class**: com.arrow.selene.device.uvc.CameraModule
+**Implementing class**: moonstone.selene.device.uvc.CameraModule
 **OS dependency**: None
 **Requirements**: OpenCV library
 
