@@ -1,12 +1,12 @@
 GPIO/I2C module interacts (send and receive digital and analog data) with peripheral hardware connected to GPIO or I2C buses.
 
-**Implementing class**: com.arrow.selene.device.peripheral.PeripheralModule
+**Implementing class**: moonstone.selene.device.peripheral.PeripheralModule
 **OS dependency**: Linux systems only (due to dependency from MRAA and UPM libraries)
 **Requirements**: MRAA and UPM libraries
 
 PeripheralModule.properties
 
-deviceClass=com.arrow.selene.device.peripheral.PeripheralModule
+deviceClass=moonstone.selene.device.peripheral.PeripheralModule
 
 # info
 
