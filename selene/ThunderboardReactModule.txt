@@ -1,13 +1,13 @@
 Thunderboard React module interacts with SiLabs Thunderboard React device via BLE, periodically acquires telemetry (3D device orientation and acceleration, temperature, humidity, UV index, ambient light and buttons state) and controls onboard green and blue LEDs.
 
-**Implementing class**: com.arrow.selene.device.ble.thunderboard.react.ThunderboardReactModule
+**Implementing class**: moonstone.selene.device.ble.thunderboard.react.ThunderboardReactModule
 **OS dependency**: Linux systems only (due to bluetooth stack implementations)
 **Requirements**: bluez v5.42+, BLE adapter
 
 ThunderboardReactModule.properties
 
 **Properties** 
-deviceClass=com.arrow.selene.device.ble.thunderboard.react.ThunderboardReactModule
+deviceClass=moonstone.selene.device.ble.thunderboard.react.ThunderboardReactModule
 
 # info
 
