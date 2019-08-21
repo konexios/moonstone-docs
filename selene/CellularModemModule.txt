@@ -7,7 +7,7 @@ Cellular modem module periodically acquires GPS position from cellular modem.
 CellularModemModule.properties
 
 **Properties** 
-deviceClass=com.arrow.selene.device.cellular.CellularModemModule
+deviceClass=moonstone.selene.device.cellular.CellularModemModule
 
 # info
 
