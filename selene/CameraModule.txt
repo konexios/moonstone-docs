@@ -8,7 +8,7 @@ CameraModule.properties
 
 **Properties** 
 
-"deviceClass=com.arrow.selene.device.uvc.CameraModule
+"deviceClass=moonstone.selene.device.uvc.CameraModule
 
 # info
 name=
