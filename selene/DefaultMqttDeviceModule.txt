@@ -7,7 +7,7 @@ Default MQTT module subscribes to specific MQTT topics.
 DefaultMqttDeviceModule.properties
 
 **Properties** 
-deviceClass=com.arrow.selene.device.mqtt.DefaultMqttDeviceModule
+deviceClass=moonstone.selene.device.mqtt.DefaultMqttDeviceModule
 
 # info
 
