@@ -1,13 +1,13 @@
 The MQTT Router Module is a general purpose MQTT protocol based adapter. It can be utilized to connect with any third party application. 
 
-**Implementing class**: deviceClass=com.arrow.selene.device.mqttrouter.MqttRouterModule
+**Implementing class**: deviceClass=moonstone.selene.device.mqttrouter.MqttRouterModule
 **OS dependency**: None
 **Requirements**: None
 
 MkRouterModule.properties
 
 **Properties** 
-deviceClass=com.arrow.selene.device.mqttrouter.MqttRouterModule
+deviceClass=moonstone.selene.device.mqttrouter.MqttRouterModule
 
 # info
 
