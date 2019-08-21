@@ -1,6 +1,6 @@
 Web camera module captures video clips from webcam, saves it locally and sends to cloud as telemetry.
 
-**Implementing class**: com.arrow.selene.device.uvc.UvcModule
+**Implementing class**: moonstone.selene.device.uvc.UvcModule
 **OS dependency**: None
 **Requirement**s: OpenCV library, webcam hardware
 
@@ -8,7 +8,7 @@ UvcModule.properties
 
 **Properties** 
 
-deviceClass=com.arrow.selene.device.uvc.UvcModule
+deviceClass=moonstone.selene.device.uvc.UvcModule
 
 # info
 
