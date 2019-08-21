@@ -8,7 +8,7 @@ CliModule.properties
 
 **Properties** 
 
-deviceClass=com.arrow.selene.device.cli.CliModuleImpl
+deviceClass=moonstone.selene.device.cli.CliModuleImpl
 
 # info
 
