@@ -1,6 +1,6 @@
 Main module representing Selene. It allows to register itself in the cloud and send periodical heartbeats to it; load, register in cloud and start connected devices; obtain information about OS and installed hardware; perform periodical self-health checks; purge old telemetry from local DB.
 
-**Implementing class**: com.arrow.selene.device.self.SelfModule
+**Implementing class**: moonstone.selene.device.self.SelfModule
 **OS dependency**: None
 **Requirements**: None
 
@@ -8,7 +8,7 @@ self.properties
 
 **Properties**:
 
-deviceClass=com.arrow.selene.device.self.SelfModule
+deviceClass=moonstone.selene.device.self.SelfModule
 
 # info
 
