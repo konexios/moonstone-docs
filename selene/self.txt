@@ -20,13 +20,13 @@ uid=${mac.simple}
 
 # properties
 
-iotConnectUrl=string
+iotConnectUrl=http://:7923
 # Defines address of API server
 
-iotConnectMqtt=string
+iotConnectMqtt=tcp://:1883
 # Defines address of MQTT server to be used to send telemetry and receive commands
 
-iotConnectMqttVHost=string
+iotConnectMqttVHost=/
 # Defines virtual MQTT host name to be used in building of unique MQTT user name
 
 apiKey=string
