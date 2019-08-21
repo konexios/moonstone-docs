@@ -1,6 +1,6 @@
 Thunderboard Sense module interacts with SiLabs Thunderboard Sense device via BLE, periodically acquires telemetry (3D device orientation and acceleration, temperature, humidity, pressure, UV index, ambient light, sound level, air quality and buttons state) and controls 4 onboard RGB LEDs.
 
-**Implementing class**: com.arrow.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
+**Implementing class**: moonstone.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
 **OS dependency**: Linux systems only (due to bluetooth stack implementations)
 **Requirements**: bluez v5.42+, BLE adapter
 
@@ -8,7 +8,7 @@ ThunderboardSenseModule.properties
 
 **Properties** 
 
-deviceClass=com.arrow.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
+deviceClass=moonstone.selene.device.ble.thunderboard.sense.ThunderboardSenseModule
 
 # info
 
