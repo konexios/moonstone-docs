@@ -1,6 +1,6 @@
 UDP forwarder module allows to forward data received from specific UDP port.
 
-**Implementing class**: com.arrow.selene.device.udp.udpforwarder.UdpForwarderModule
+**Implementing class**: moonstone.selene.device.udp.udpforwarder.UdpForwarderModule
 **OS dependency**: None
 **Requirements**: None
 
@@ -8,7 +8,7 @@ UdpForwarderModule.properties
 
 **Properties**
 
-deviceClass=com.arrow.selene.device.udp.udpforwarder.UdpForwarderModule
+deviceClass=moonstone.selene.device.udp.udpforwarder.UdpForwarderModule
 
 # info
 
