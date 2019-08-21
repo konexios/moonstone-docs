@@ -1,6 +1,6 @@
 Default MQTT module subscribes to specific MQTT topics.
 
-**Implementing class**: com.arrow.selene.device.mqtt.DefaultMqttDeviceModule
+**Implementing class**: moonstone.selene.device.mqtt.DefaultMqttDeviceModule
 **OS dependency**: None
 **Requirements**: None
 
